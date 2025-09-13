@@ -1,0 +1,9 @@
+# Evita enviar archivos innecesarios al daemon (builds más rápidos y limpios)
+.git
+__pycache__/
+*.pyc
+*.log
+.env
+venv/
+dist/
+build/
