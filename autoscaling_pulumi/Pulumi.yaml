@@ -1,0 +1,6 @@
+name: pulumi-autoscaling-lab
+runtime:
+  name: python
+  options:
+    virtualenv: .venv
+description: ASG + ALB + TargetTracking (CPU) en VPC por defecto con Pulumi (Python)

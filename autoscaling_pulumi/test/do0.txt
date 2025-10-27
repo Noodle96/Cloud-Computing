@@ -1,0 +1,4 @@
+pulumi login --local
+pulumi stack init dev
+
+pip install -r requirements.txt

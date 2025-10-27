@@ -1,0 +1,19 @@
+# 1) Cargar tu perfil por defecto (por si la shell abrió sin el rc)
+source ~/.zshrc
+
+# 2) Verificar que estás en el perfil correcto
+echo $AWS_PROFILE    # debería imprimir: academy
+
+# 3) Comprobar identidad AWS (rápido)
+# aws sts get-caller-identity
+aws sts get-caller-identity --profile academy
+
+
+# 4) Ir a tu repo del lab
+cd code/CloudComputing/autoscaling_pulumi
+
+# 5) Activar el entorno Python del proyecto
+source .venv/bin/activate
+
+# (opcional) 6) Chequeo express de Pulumi
+pulumi version

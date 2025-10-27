@@ -1,0 +1,12 @@
+# Solo si falla el paso 3 de do1.txt
+
+# Reconfigura y reactiva el perfil (persistirá de nuevo en ~/.zshrc)
+go mybin/
+source ./setup_academy.sh
+or ./setup_academy.sh
+
+# Vuelve a verificar
+aws sts get-caller-identity
+aws sts get-caller-identity --profile academy
+
+deactivate

@@ -1,0 +1,36 @@
+| Comando                         | ¿Qué hace?                                                                                                                  | ¿Cuándo se ejecuta?                                                                                                                         |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pip install pulumi pulumi-aws` | Instala las librerías **de Python** que usa tu programa Pulumi (SDK `pulumi` y proveedor `pulumi-aws`) **dentro del venv**. | **Una sola vez por entorno virtual** (o cuando cambies `requirements`). En cada arranque solo activas el venv: `source .venv/bin/activate`. |
+| `pulumi login --local`          | Configura Pulumi para guardar el **estado** localmente (carpeta `.pulumi` en el proyecto).                                  | **Una sola vez por proyecto** (queda recordado). No hace falta cada reinicio.                                                               |
+| `pulumi stack init dev`         | Crea un **stack** llamado `dev` (el “ambiente” del proyecto). Genera `Pulumi.dev.yaml`.                                     | **Una sola vez por proyecto/stack**. Luego usas `pulumi stack select dev` si cambias de stack.                                              |
+
+
+
+pulumi stack ls
+
+| Comando                           | Para qué sirve                                                       | Frecuencia                                                  |
+| --------------------------------- | -------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `python3 -m venv .venv`           | Crea un entorno virtual **solo para este proyecto**.                 | **Una vez por proyecto**.                                   |
+| `source .venv/bin/activate`       | Activa el venv (para que `pip` instale local al proyecto).           | **Cada vez que abras terminal** para trabajar en este repo. |
+| `pip install -r requirements.txt` | Instala las dependencias listadas (SDK Pulumi + AWS).                | **Una vez**, y cuando cambie `requirements.txt`.            |
+| `pulumi login --local`            | Guarda el estado de Pulumi **localmente** (no en la nube de Pulumi). | **Una vez por proyecto**.                                   |
+| `pulumi stack init dev`           | Crea el stack “dev” (archivo `Pulumi.dev.yaml`).                     | **Una vez** (por stack).                                    |
+| `pulumi stack select dev`         | Selecciona el stack activo si tu proyecto tuviera varios.            | Ocasional, solo si cambias de stack.                        |
+| `pulumi preview`                  | Previsualiza lo que creará/actualizará **sin aplicar**.              | Úsalo antes de `up`.                                        |
+| `pulumi up`                       | Crea/actualiza los recursos en AWS.                                  | Cuando quieras aplicar cambios.                             |
+| `pulumi destroy`                  | Borra los recursos creados por el stack.                             | Al terminar el lab o limpiar.                               |
+| `pulumi up`                       | Aplicamos la infraestructura definida en el código.                  | Cuando quieras aplicar cambios.                             |
+
+
+pulumi stack output alb_dns_name
+app-alb-dc847ff-1583775791.us-east-1.elb.amazonaws.com
+
+pulumi stack output asg_name    
+app-asg-1f48b38
+
+
+AL inicio, abri las 3 terminales.
+Activa tu venv en cada terminal que abras:  source .venv/bin/activate
+
+
+https://031342336131.signin.aws.amazon.com/console
