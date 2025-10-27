@@ -1,0 +1,270 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2025-10-22T19:21:58.147585296-05:00",
+            "magic": "0e2ec52d1b66765ee2d18d9bcde12b5c2ca2bbaf40316de78850b183197c3274",
+            "version": "v3.203.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "Noodle96-org",
+                "project": "pulumi-aws-demo",
+                "stack": "dev"
+            }
+        },
+        "metadata": {},
+        "resources": [
+            {
+                "urn": "urn:pulumi:dev::pulumi-aws-demo::pulumi:pulumi:Stack::pulumi-aws-demo-dev",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "created": "2025-10-22T23:39:53.509244649Z",
+                "modified": "2025-10-22T23:39:53.509244649Z",
+                "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#178",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#178"
+                    },
+                    {
+                        "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#79"
+                    },
+                    {
+                        "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#181"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../anaconda3/lib/python3.12/asyncio/events.py#88"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../anaconda3/lib/python3.12/asyncio/base_events.py#1985"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../anaconda3/lib/python3.12/asyncio/base_events.py#639"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../anaconda3/lib/python3.12/asyncio/base_events.py#672"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../.pulumi/bin/pulumi-language-python-exec#232"
+                    }
+                ]
+            },
+            {
+                "urn": "urn:pulumi:dev::pulumi-aws-demo::pulumi:providers:aws::default_7_9_0",
+                "custom": true,
+                "id": "57fd6175-f9de-4b01-994a-0bd63f4c7cc6",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "__internal": {},
+                    "region": "us-east-1",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "7.9.0"
+                },
+                "outputs": {
+                    "region": "us-east-1",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "7.9.0"
+                },
+                "created": "2025-10-23T00:03:34.111326903Z",
+                "modified": "2025-10-23T00:03:34.111326903Z"
+            },
+            {
+                "urn": "urn:pulumi:dev::pulumi-aws-demo::aws:s3/bucket:Bucket::my-bucket",
+                "custom": true,
+                "id": "my-bucket-d91cc94",
+                "type": "aws:s3/bucket:Bucket",
+                "inputs": {
+                    "__defaults": [
+                        "bucket",
+                        "forceDestroy"
+                    ],
+                    "bucket": "my-bucket-d91cc94",
+                    "forceDestroy": false,
+                    "region": "us-east-1",
+                    "tagsAll": {}
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":3600000000000,\"read\":1200000000000,\"update\":1200000000000}}",
+                    "__pulumi_raw_state_delta": {
+                        "obj": {
+                            "ps": {
+                                "corsRules": {
+                                    "arr": {}
+                                },
+                                "grants": {
+                                    "arr": {
+                                        "el": {
+                                            "0": {
+                                                "obj": {
+                                                    "ps": {
+                                                        "permissions": {
+                                                            "arr": {}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "lifecycleRules": {
+                                    "arr": {}
+                                },
+                                "logging": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                },
+                                "replicationConfiguration": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                },
+                                "serverSideEncryptionConfiguration": {
+                                    "plu": {
+                                        "i": {
+                                            "obj": {
+                                                "ps": {
+                                                    "rule": {
+                                                        "plu": {
+                                                            "i": {
+                                                                "obj": {
+                                                                    "ps": {
+                                                                        "applyServerSideEncryptionByDefault": {
+                                                                            "plu": {
+                                                                                "i": {
+                                                                                    "obj": {}
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "versioning": {
+                                    "plu": {
+                                        "i": {
+                                            "obj": {}
+                                        }
+                                    }
+                                },
+                                "website": {
+                                    "plu": {
+                                        "i": {}
+                                    }
+                                }
+                            },
+                            "renamed": {
+                                "corsRules": "cors_rule",
+                                "grants": "grant",
+                                "lifecycleRules": "lifecycle_rule"
+                            }
+                        }
+                    },
+                    "accelerationStatus": "",
+                    "acl": null,
+                    "arn": "arn:aws:s3:::my-bucket-d91cc94",
+                    "bucket": "my-bucket-d91cc94",
+                    "bucketDomainName": "my-bucket-d91cc94.s3.amazonaws.com",
+                    "bucketPrefix": "",
+                    "bucketRegion": null,
+                    "bucketRegionalDomainName": null,
+                    "corsRules": [],
+                    "forceDestroy": false,
+                    "grants": [
+                        {
+                            "id": "ef39478110ca6f3c2da05d6b8d2b7ef098ec30715c004a523de70e6d87015a85",
+                            "permissions": [
+                                "FULL_CONTROL"
+                            ],
+                            "type": "CanonicalUser",
+                            "uri": ""
+                        }
+                    ],
+                    "hostedZoneId": null,
+                    "id": "my-bucket-d91cc94",
+                    "lifecycleRules": [],
+                    "logging": null,
+                    "objectLockConfiguration": null,
+                    "objectLockEnabled": null,
+                    "policy": "",
+                    "region": "us-east-1",
+                    "replicationConfiguration": null,
+                    "requestPayer": "BucketOwner",
+                    "serverSideEncryptionConfiguration": {
+                        "rule": {
+                            "applyServerSideEncryptionByDefault": {
+                                "kmsMasterKeyId": "",
+                                "sseAlgorithm": "AES256"
+                            },
+                            "bucketKeyEnabled": false
+                        }
+                    },
+                    "tags": null,
+                    "tagsAll": null,
+                    "versioning": {
+                        "enabled": false,
+                        "mfaDelete": false
+                    },
+                    "website": null,
+                    "websiteDomain": null,
+                    "websiteEndpoint": null
+                },
+                "parent": "urn:pulumi:dev::pulumi-aws-demo::pulumi:pulumi:Stack::pulumi-aws-demo-dev",
+                "initErrors": [
+                    "creating urn:pulumi:dev::pulumi-aws-demo::aws:s3/bucket:Bucket::my-bucket: 2 errors occurred:\n\t* reading S3 Bucket (my-bucket-d91cc94) object lock configuration: operation error S3: GetObjectLockConfiguration, https response error StatusCode: 403, RequestID: DSQN5MEJNMTMT7F7, HostID: ZUOgsCdqRQiwSe6xcn4vCIkJmO1D6iMkG3ljixXumXXHsawXcfZj3/HmWwFZRPpfXM0f1UUUXf5a7ELIK3ql2A==, api error AccessDenied: User: arn:aws:sts::866742149263:assumed-role/voclabs/user3326326=jtitoc@unsa.edu.pe is not authorized to perform: s3:GetBucketObjectLockConfiguration on resource: \"arn:aws:s3:::my-bucket-d91cc94\" with an explicit deny in an identity-based policy\n\t* Missing Resource Identity After Create: The Terraform provider unexpectedly returned no resource identity after having no errors in the resource create. This is always a problem with the provider and should be reported to the provider developer\n\n"
+                ],
+                "provider": "urn:pulumi:dev::pulumi-aws-demo::pulumi:providers:aws::default_7_9_0::57fd6175-f9de-4b01-994a-0bd63f4c7cc6",
+                "created": "2025-10-23T00:03:37.929716155Z",
+                "modified": "2025-10-23T00:03:37.929716155Z",
+                "sourcePosition": "project:///__main__.py#7",
+                "stackTrace": [
+                    {
+                        "sourcePosition": "project:///__main__.py#7"
+                    },
+                    {},
+                    {},
+                    {
+                        "sourcePosition": "project:///../../../.pulumi/bin/pulumi-language-python-exec#188"
+                    },
+                    {
+                        "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#207"
+                    },
+                    {
+                        "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#178"
+                    },
+                    {
+                        "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#79"
+                    },
+                    {
+                        "sourcePosition": "project:///venv/lib/python3.12/site-packages/pulumi/runtime/stack.py#181"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../anaconda3/lib/python3.12/asyncio/events.py#88"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../anaconda3/lib/python3.12/asyncio/base_events.py#1985"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../anaconda3/lib/python3.12/asyncio/base_events.py#639"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../anaconda3/lib/python3.12/asyncio/base_events.py#672"
+                    },
+                    {
+                        "sourcePosition": "project:///../../../.pulumi/bin/pulumi-language-python-exec#232"
+                    }
+                ]
+            }
+        ]
+    }
+}
