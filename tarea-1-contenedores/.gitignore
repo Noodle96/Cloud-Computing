@@ -1,0 +1,2 @@
+# ignorar todos las carpeta que  se llamen .venv
+.venv/
